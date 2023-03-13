@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section class="product">
+        <div class="container">
+            <p id="test"></p>
+            <h1 class="mt-2">Product</h1>
+            <label for="productName">Product Name</label>
+            <input type="text" class="form-control mt-4" id="productName">
+
+            <label for="productPrice">Product Price</label>
+            <input type="text" class="form-control mt-4" id="productPrice">
+
+            <label for="productCategory">Product Category</label>
+            <input type="text" class="form-control mt-4" id="productCategory">
+
+            <label for="productDescription">Product Description</label>
+            <input type="text" class="form-control mt-4" id="productDescription">
+
+            <label for="count" id="countLabel">Product Count</label>
+            <input type="text" class="form-control mt-4 w-25" id="count">
+
+            <button onclick="addProduct()" class="btn btn-info mt-4" id="add">Add Product</button>
+            <button onclick="deleteAll()" class="btn btn-danger mt-4">Delete All</button>
+
+            <input type="text" onkeyup="searchProduct(this.value)" class="form-control w-50 m-auto my-5" name="" id="search" placeholder="Search Product">
+
+            <table class="table text-center mt-5 table-bordered">
+                <thead class="bg-dark text-white">
+                    <th>#ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </thead>
+
+                <tbody id="tBody">
+                </tbody>
+
+                <tfoot id="tFoot" class="bg-dark text-white">
+
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
